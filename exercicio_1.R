@@ -105,7 +105,7 @@ x[c(3:4)]
 # $ x: Factor w/ 2 levels "d","e": 1 2
 # $ y: num  1 4
 
-df <- data.frame(x = c("d", "e"), y = c(1,4))
+df <- data.frame(x = factor (c("d", "e")), y = c(1,4))
 
 str(df)
 
