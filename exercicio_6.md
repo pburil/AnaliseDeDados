@@ -828,7 +828,7 @@ summary(banco)
 ``` r
 banco_selecionado <- banco %>% 
   select(Q1607, D1A_ID, D3_ESCOLA, D9, Q1501, Q18) %>%
-  filter(Q1607 <= 10) %>%
+  filter(Q1607 < 11) %>%
   filter(D9 < 9999998) %>%
   filter(Q1501 <= 10) %>%
   filter(Q18 <= 10)
