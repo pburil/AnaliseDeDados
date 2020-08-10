@@ -387,4 +387,7 @@ linha vertical do 0. Isso significa que há significância estátistica.
 Cada ponto indica o valor do B (beta) estimado. No caso, os homens e os
 evangélicos teriam um B positivo para a avaliação do governo Bolsonaro.
 O maior intervalo de confiança é o de não ter religião, significando que
-é a categoria que mais pode ter variação entre os casos.
+é a categoria que mais pode ter variação entre os casos. Os intervalos de
+confiança estando distante uns dos outros, significa que podemos tentar
+melhor nosso modelo. Se for só o de uma variável que destoa, significa 
+que essa pode não ser uma boa variável para o modelo.
