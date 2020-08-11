@@ -378,7 +378,7 @@ do tamanho das amostras das categorias de religião variarem entre si
 10.0dao governo Bolsonaro do que Homens sem religião ou de outras
 religiões. Também vemos que a amostra das mulheres é maior do que a dos
 homens (1206 para 1120) e que mulheres evangélicas e católicas atribuem
-mais nota mais máxima do que mulheres de outras religiões. Pelo modelo,
+mais nota máxima do que mulheres de outras religiões. Pelo modelo,
 vemos que todas as variáveis inseridas (D2\_SEXO e as categorias da
 variável religião) tem significância estátistica. O R² e o R² foram
 muito pequenos e que a categoria com menor relevância estatística é Não
@@ -387,7 +387,9 @@ linha vertical do 0. Isso significa que há significância estátistica.
 Cada ponto indica o valor do B (beta) estimado. No caso, os homens e os
 evangélicos teriam um B positivo para a avaliação do governo Bolsonaro.
 O maior intervalo de confiança é o de não ter religião, significando que
-é a categoria que mais pode ter variação entre os casos. Os intervalos de
-confiança estando distante uns dos outros, significa que podemos tentar
-melhor nosso modelo. Se for só o de uma variável que destoa, significa 
-que essa pode não ser uma boa variável para o modelo.
+é a categoria que mais pode ter variação entre os casos. Entrentanto, comparado com 
+a variável "Outras", elas tem sobreposições no eixo vertical, pelo 
+intervlao de confiança. Os intervalos de confiança estando distante uns 
+dos outros, significa que podemos tentar melhor nosso modelo. Se for só 
+o de uma variável que destoa, significa que essa pode não ser uma boa variável 
+para o modelo.
