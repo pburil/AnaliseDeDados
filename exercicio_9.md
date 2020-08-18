@@ -83,13 +83,15 @@ summary(regressao)
 
 Vemos que o R² e o R² ajustado são relativamente razoáveis. Os p-valores
 das interações não deram significância estátistica, ficaram bem altos. O
-Beta do D2\_SEXO deu negativo, sugerindo que a categoria de controle é o
-sexo feminino. Quando religião for igual a 0, o D2\_SEXO corresponderá a
--6.115 (feminino) para a avaliação ao governo bolsonaro, isso significa
-que o 0 seria o católico para religiao e feminio para o D2\_SEXO. Quando
-o sexo for igual a 0 (no caso, feminino) a religião terá coeficientes
-positivos, com excessão de Outr as (posivelmente religiões de matriz
-afro).
+Beta do D2\_SEXO deu negativo, sugerindo que a categoria de referencia é o
+sexo masculino. Assim, sendo os homens a categoria de referência, as mulheres
+avaliam Bolsonaro, em média, -6.115 a menos do que os homens católicos.
+Quando religião for igual a 0 (católica), o D2\_SEXO corresponderá a -6.115 
+(feminino e católica) para a avaliação ao governo bolsonaro. Assim, o 0 seria o católico para religiao e
+masculino para o D2\_SEXO.  Quando o sexo for igual a 1 (no caso, masculino) a religião terá coeficientes
+positivos, com excessão de Outras (sem ser a interação entre as religiões e o sexo). 
+Também percebemos que haverá diferença significante comparando o homens católicos com homens evangélicos. 
+O coeficiente omitido é o de homens católicos. 
 
 ### Interprete a significancia estatística dos coeficientes estimados
 
