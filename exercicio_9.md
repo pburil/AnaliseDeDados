@@ -91,7 +91,9 @@ Quando religião for igual a 0 (católica), o D2\_SEXO corresponderá a -6.115
 masculino para o D2\_SEXO.  Quando o sexo for igual a 1 (no caso, masculino) a religião terá coeficientes
 positivos, com excessão de Outras (sem ser a interação entre as religiões e o sexo). 
 Também percebemos que haverá diferença significante comparando o homens católicos com homens evangélicos. 
-O coeficiente omitido é o de homens católicos. 
+O coeficiente omitido é o de homens católicos. Assim, podemos interpretar os outros coeficientes da seguinte forma:
+para o coeficiente da religião evangélica, seria que há uma pequena significância estátistica comparando com 
+os homens de reliigão católica.
 
 ### Interprete a significancia estatística dos coeficientes estimados
 
