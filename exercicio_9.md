@@ -136,5 +136,10 @@ confiança não se sobrepõem. O tamanho do intervalo de confiança das
 Outras e de Não tem religião sugere que o tamanho do intervalo desse
 paramêtro para essa população é maior. A amplitude da variação pode ser
 maior nesses casos. Entretanto, temos que perceber que essa
-representação é de interações que não deram estatisticamente
-significante.
+representação são de interações que não deram estatisticamente
+significante. Por fim, quando comparamos os homens sem religião 
+com os homens de outras categorias, percebemos que os intervalos 
+de confiança se sobrepõem. Para o sexo feminino, talvez só haja significância
+estátistica entre o Outras e as mulheres evangélicas, já que o intervalo 
+de confiança não se sobrepõem. Resumidamente, não há tanta significância 
+estátistica entre as categorias, seja entre os homens ou entre as mulheres.
