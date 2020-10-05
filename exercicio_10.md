@@ -235,7 +235,12 @@ para todas as outras variáveis. Por exemplo: o aumento de uma unidade na auto a
 ideológica (Q18), aumentaria em 0.0262 a chance de explicar o voto em Bolsonaro.
 O valor McFadden que representa o pseudo R² foi muito similar ao R². Os intervalos de
 confiança de todas as variáveis também foram muito similares (havendo
-mudanças em sua magnitude, mas não em sua natureza). 
+mudanças em sua magnitude, mas não em sua natureza). O SE (erro padrão) é uma medida de eficiência 
+da estimativa. Quanto maior o erro, pior. A variável com o maior erro é a de Não ter religião.
+Assim, as variáveis com o maior p-valor é a de Não ter religião e a da renda. Isso significa
+que o pesquisador não pode rejeitar a hipótese nula de independência estatística entre Não ter religião
+e o voto em Bolsonaro, tendo em vista que o erro padrão é relativamente alto.
+
 
 ### Verifique a quantidade de classificações corretas da regressao logistica e avalie o resultado
 
