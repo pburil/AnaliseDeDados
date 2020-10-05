@@ -682,6 +682,7 @@ casos da variável dependente.
 Pelo comando misClassError, temos que 83% das classificações estão corretas. 
 Pelo comando optimalCutoff, temos que o valor ideal para maximizar as 
 classificações corretas no threshold é de 0.5566875 (por isso alteramos o seu valor). 
-O modelo acerta em 49% dos casos e erra em 34% dos casos. Dessa forma, a diferença entre o
-modelo estimado e o modelo nulo é residual (muito distante do patamar
-mÌnimo de 25% sugerido pela literatura).
+O modelo acerta em 49% dos casos (quando previa que era positivo e acertou) 
+e acerta em 34% dos casos (quando previa que era negativo e acertou), totalizando 83%. 
+Dessa forma, a diferença entre o modelo estimado e o modelo nulo é bastante grande 
+(a diferença do patamar mínimo de 25% sugerido pela literatura).
