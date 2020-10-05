@@ -110,6 +110,8 @@ que na regressão o gênero de referência ficou o feminino- e ser
 evangélico (no caso, ser evangélico explicaria positivamente o voto em
 Bolsonaro). Os R² tiveram um valor bastante aceitável (na faixa de 0.5),
 sugerindo que há uma boa explicação do modelo ao voto em Bolsonaro.
+Em relação ao gráfico do dwplot, vemos que as variáveis que cortam o 0 tem em seu intervalo de confiança esse valor.
+Isso significa que interceptar o 0 no eixo X sugere que essas variáveis não tem relevância estatística. 
 
 ### O resultado difere dos encontrados anteriormente, quando a variavel dependente era a aprovação de Bolsonaro?
 
@@ -228,7 +230,7 @@ mudou-se algum grau (ou magnitude) de correlação entre algumas
 variáveis, mas não mudou o sinal dos coeficientes. Em relação a coluna AME, 
 que traduz a razão de chance de um evento ocorrer, os coeficientes foram muito baixos. 
 Diferente da Regressão Linear, na logística não podemos dizer que o aumento em 
-uma unidade na escolaridade ocasionaria um efeito positivo (0.0066) no voto em Bolsonaro. 
+uma unidade na escolaridade ocasionaria um efeito positivo (0.0066 ou 6%) no voto em Bolsonaro. 
 A interpretação deve seguir da seguinte forma: o aumento de uma unidade na escolaridade,
 aumenta em 0.0066 a chance de explicar o voto em Bolsonaro. Essa lógica deve ser aplicada 
 para todas as outras variáveis. Por exemplo: o aumento de uma unidade na auto atribuição 
@@ -239,7 +241,10 @@ mudanças em sua magnitude, mas não em sua natureza). O SE (erro padrão) é um
 da estimativa. Quanto maior o erro, pior. A variável com o maior erro é a de Não ter religião.
 Assim, as variáveis com o maior p-valor é a de Não ter religião e a da renda. Isso significa
 que o pesquisador não pode rejeitar a hipótese nula de independência estatística entre Não ter religião
-e o voto em Bolsonaro, tendo em vista que o erro padrão é relativamente alto.
+e o voto em Bolsonaro, tendo em vista que o erro padrão é relativamente alto. 
+Por fim, a variável idade tem relação positiva e cada ano a mais de vida, a probabilidade de votarem Bolsonaro
+é aumentada em 0.0012 (ou 12%).
+
 
 
 ### Verifique a quantidade de classificações corretas da regressao logistica e avalie o resultado
