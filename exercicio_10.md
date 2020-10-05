@@ -230,11 +230,13 @@ mudou-se algum grau (ou magnitude) de correlação entre algumas
 variáveis, mas não mudou o sinal dos coeficientes. Em relação a coluna AME, 
 que traduz a razão de chance de um evento ocorrer, os coeficientes foram muito baixos. 
 Diferente da Regressão Linear, na logística não podemos dizer que o aumento em 
-uma unidade na escolaridade ocasionaria um efeito positivo (0.0066 ou 6%) no voto em Bolsonaro. 
+uma unidade na escolaridade ocasionaria um efeito positivo (0.0066) no voto em Bolsonaro. 
 A interpretação deve seguir da seguinte forma: o aumento de uma unidade na escolaridade,
 aumenta em 0.0066 a chance de explicar o voto em Bolsonaro. Essa lógica deve ser aplicada 
 para todas as outras variáveis. Por exemplo: o aumento de uma unidade na auto atribuição 
-ideológica (Q18), aumentaria em 0.0262 a chance de explicar o voto em Bolsonaro.
+ideológica (Q18), aumentaria em 0.0262 (ou 2%) a chance de explicar o voto em Bolsonaro.
+Em relação ao gênero, passar de um respondente masculino para um feminino diminui em 5.26% a probabilidade
+desse respodente votar em Bolsonaro.
 O valor McFadden que representa o pseudo R² foi muito similar ao R². Os intervalos de
 confiança de todas as variáveis também foram muito similares (havendo
 mudanças em sua magnitude, mas não em sua natureza). O SE (erro padrão) é uma medida de eficiência 
