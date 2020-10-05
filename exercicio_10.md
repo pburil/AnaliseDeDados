@@ -225,10 +225,17 @@ summary(margins(regressao_logistica))
 Em relação a correlação das variáveis -Q1501, Q18, D2\_SEXO, Religião
 Evangélica- e aos R² e ao pseudo R² os resultados foram bem similares,
 mudou-se algum grau (ou magnitude) de correlação entre algumas
-variáveis, mas nada que mereça um destaque principal. O valor McFadden
-que representa o pseudo R² foi muito similar ao R². Os intervalos de
+variáveis, mas não mudou o sinal dos coeficientes. Em relação a coluna AME, 
+que traduz a razão de chance de um evento ocorrer, os coeficientes foram muito baixos. 
+Diferente da Regressão Linear, na logística não podemos dizer que o aumento em 
+uma unidade na escolaridade ocasionaria um efeito positivo (0.0066) no voto em Bolsonaro. 
+A interpretação deve seguir da seguinte forma: o aumento de uma unidade na escolaridade,
+aumenta em 0.0066 a chance de explicar o voto em Bolsonaro. Essa lógica deve ser aplicada 
+para todas as outras variáveis. Por exemplo: o aumento de uma unidade na auto atribuição 
+ideológica (Q18), aumentaria em 0.0262 a chance de explicar o voto em Bolsonaro.
+O valor McFadden que representa o pseudo R² foi muito similar ao R². Os intervalos de
 confiança de todas as variáveis também foram muito similares (havendo
-mudanças em sua magnitude, mas não em sua natureza).
+mudanças em sua magnitude, mas não em sua natureza). 
 
 ### Verifique a quantidade de classificações corretas da regressao logistica e avalie o resultado
 
@@ -659,10 +666,10 @@ Bolsonaro. Dito de outra forma, é uma medida de acurácia preditiva do
 modelo. Quanto maior a diferença entre a taxa geral de acerto do modelo
 ajustado em relação ao modelo nulo, maior é a contribuição grupal das
 variáveis independentes para classificar corretamente a ocorrência dos
-casos da variável dependente. Pelo comando misClassError, temos que 83%
-das classificações estão corretas. Pelo comando optimalCutoff, temos que
-o valor ideal para maximizar as classificações corretas no threshold é
-de 0.5566875 (por isso alteramos o seu valor). O modelo acerta em 49%
-dos casos e erra em 34% dos casos. Dessa forma, a diferença entre o
+casos da variável dependente. 
+Pelo comando misClassError, temos que 83% das classificações estão corretas. 
+Pelo comando optimalCutoff, temos que o valor ideal para maximizar as 
+classificações corretas no threshold é de 0.5566875 (por isso alteramos o seu valor). 
+O modelo acerta em 49% dos casos e erra em 34% dos casos. Dessa forma, a diferença entre o
 modelo estimado e o modelo nulo é residual (muito distante do patamar
 mÌnimo de 25% sugerido pela literatura).
