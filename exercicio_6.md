@@ -431,12 +431,12 @@ geom_jitter()
 ![](exercicio_6_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->
 
 O valor 0 não está presente no intervalo de confiança, logo o resultado
-pode ter algum tipo de significância estátistica. O p-valor também
+tem significância estátistica. O p-valor também
 contribui para a ideia de que há algum tipo de correlação estatística
 entre essas duas variáveis. O valor da correlação está bem baixo
 (positiva 0,1), sugerindo que a magnitude da correlação das variáveis é
-fraca. Também vemos que há alguns casos que poderíamos considerá-los de
-certa forma outliers (80 anos +). Deveríamos testar o resultado do
+fraca. Também vemos que há alguns casos que poderíamos considerá-los
+outliers (80 anos +). Deveríamos testar o resultado do
 modelo sem os outliers.
 
 ### Faça uma regressao linear mostrando em que medida a idade do respondente explica a avaliação do candidato Jair Bolsonaro. Interprete o resultado.
@@ -467,11 +467,11 @@ summary(regressao)
     ## F-statistic: 9.346 on 1 and 1460 DF,  p-value: 0.002276
 
 Aqui encontramos um p-valor bastante baixo e com os astericos (\*\*\*)
-em torno do intercepto e da variável independente. Entretanto,
+em torno do intercepto e da variável independente, com correlação estatística. Entretanto,
 encontramos um R² e um R² ajustado bem baixo, sugerindo que tem mais
 variáveis relevantes que devem ser inseridas no modelo. O erro padrão é
 de 0.23, sugerindo que há uma dispersão de 0.23 da amostra em torno da
-média populacional (um valor baixo, pode ter sido causado pela
+média populacional (um valor razóavel, pode ter sido causado pela
 influência do tamanho da amostra no erro padrão).
 
 ### Observe a variável D3\_ESCOLA dos respondentes relativa a educação. Represente esta variável graficamente. \#OBS: observe que esta variável está como numérica, apesar de ser categórica ordinal. No entanto, trate-a como numérica, indicando que quanto maior o valor, maior o nível educacional do respondente
@@ -506,8 +506,8 @@ cor.test(banco_selecionado$Q1607, banco_selecionado$D3_ESCOLA)
     ## -0.06416624
 
 O intervalo de confiança não contém o valor 0, sugerindo que pode haver
-algum tipo de significância estatística. O p-valor está baixo (\<0.05),
-mas a correlação das variáveis está bem ruim, negativo 0.06.
+algum tipo de significância estatística. O p-valor está baixo (\<0.05) e a magnitude da correlação
+é negativa em 0.0641. Sugerindo que quanto maior a educação, menor a nota de Bolsonaro.
 
 ### Faça uma regressao linear mostrando em que medida a educação do respondente explica a avaliação do candidato Jair Bolsonaro. Interprete o resultado.
 
@@ -536,13 +536,14 @@ summary(regressao1)
     ## Multiple R-squared:  0.004117,   Adjusted R-squared:  0.003435 
     ## F-statistic: 6.036 on 1 and 1460 DF,  p-value: 0.01413
 
-Esse modelo tem um p-valor pequeno, alguns asteriscos em torno do
-intercepto (\*\*\*) e da variável D3\_ESCOLA. Tem um erro padrão de 0,25
-(maior do que o modelo passado). Temos um R² e R² ajustado pequeno (e
-menor do que o modelo passado), sugerindo uma menor explicação do
-modelo. O erro residual padronizado de 3.926 (O melhor modelo é aquele
+Esse modelo tem um p-valor pequeno, alguns asteriscos em torno da
+ variável D3\_ESCOLA, ou seja, tem correlação estatística. 
+Tem um erro padrão de 0,25 (maior do que o modelo passado). 
+Temos um R² e R² ajustado pequeno (e menor do que o modelo passado), 
+sugerindo uma menor explicação do modelo. O erro residual padronizado de 3.926 (O melhor modelo é aquele
 que tem o menor erro padronizado e maior R²). O RSE influencia na
-comparabilidade dos resultados.
+comparabilidade dos resultados. O coeficiente é negativo em 0.11352. Quanto maior a escolaridade,
+menor a avaliação em Bolsonaro.
 
 ### Observe a variável D9 sobre renda dos respondentes. Represente esta variável graficamente. \#OBS: note que os valores 9999998 e 9999999 devem ser descartados.
 
@@ -601,8 +602,7 @@ cor.test(banco_selecionado$Q1607, banco_selecionado$D9)
 
 O 0 pertence ao intervalo de confiança, mostrando que não há
 significância estátística na associação das variáveis. O p-valor
-reforça essa ideia. O valor da correlação está positivo (0.008), porém
-muito baixo. Até agora foi a pior associação de variáveis
+reforça essa ideia. O valor da correlação está positivo (0.008). 
 
 ### Faça uma regressao linear mostrando em que medida a renda do respondente explica a avaliação do candidato Jair Bolsonaro. Interprete o resultado.
 
@@ -647,9 +647,7 @@ O p-valor não foi estatisticamente significante. O R² ajustado é
 negativo, mostrando que essa variável explica negativamente o modelo.
 Tem poucos astericos para a variável independente. O erro padrão é alto,
 sugerindo que há uma grande chance da média da amostra ser ruim
-comparado com a população. O modelo que tiver menor RSE, tem menor erro.
-Se os graus de liberdade variarem entre os modelos, é muito difícil de
-compara-los entre si.
+comparado com a população. A variável Renda (D9) não explica a avaliação em Bolsonaro.
 
 ### Deixando as variáveis socio-economicas de lado, vamos analisar agora variáveis relativas a preferências políticas.
 
@@ -706,10 +704,9 @@ cor.test(banco_selecionado$Q1607, banco_selecionado$Q1501)
     ## -0.4339322
 
 O 0 não pertence ao intervalo de confiança, o p-valor é relevante
-estatisticamente. Há uma correlação negativa de 0.43 entre a nota
-atribuida ao governo Bolsonaro e a nota dada ao PT (uma correlação não
-tão alta).
-
+estatisticamente. Há uma magnitude negativa de 0.43 entre a nota
+atribuida ao governo Bolsonaro e a nota dada ao PT (sugerindo que quanto maior a nota dada ao PT,
+menor a nota dada a Bolsonaro).
 ### Faça uma regressao linear mostrando em que medida a nota dada ao PT pelo respondente explica a avaliação do candidato Jair Bolsonaro. Interprete o resultado.
 
 ``` r
@@ -741,7 +738,7 @@ O p-valor é relevante estatisticamente. O R² e o R² ajustado são
 relativamente bons comparados com os que já apareceram no exercício. Há
 muitos astericos, tanto no intercepto, quanto na variável que queremos
 correlacionar. Os valores dos erros não são discrepantes comparados com
-os exercícios passados.
+os exercícios passados. Quanto maior a nota dada ao PT, menor a nota dada a Bolsonaro em 0.44.
 
 ### A variável Q18 indica uma auto-atribuição em uma escala ideologica de 0 a 10, da esquerda para a direita. Valores acima de 10 representam respostas não uteis para nossa pesquisa. Represente graficamente esta variável apenas com os valores válidos e descreva o resultado.
 
@@ -814,11 +811,10 @@ cor.test(banco_selecionado$Q1607, banco_selecionado$Q18)
     ##       cor 
     ## 0.3546042
 
-Temos uma correlação positiva de 0.35 (não é tão alta, tendo em vista
-que correlação varia de -1 para 1). O p-valor estatisticamente
+Temos uma correlação positiva de 0.35. O p-valor está estatisticamente
 significante e o 0 não está presente no intervalo de confiança (vale
 destacar que esse intervalo de confiança é relativamente pequeno, talvez
-haja muito erro envolvido nesse modelo)
+haja muito erro envolvido nesse modelo). Esse intervalo de confiança mostra que tem correlação estatística
 
 ### Faça uma regressao linear mostrando em que medida a auto-atribuição ideológica do repondente explica a avaliação do candidato Jair Bolsonaro. Interprete o resultado.
 
@@ -864,11 +860,11 @@ O p-valor também foi estatisticamente relevante. O modelo tem muitos
 astericos, tanto no intercepto, quanto na variável (\*\*\*). O erro
 residual foi de 3678 (quanto menor o RSE, melhor o modelo). O R² e o R²
 ajustado foi alto (comparado com as questões até aqui) - quanto maior os
-R², melhor.
+R², melhor. A variável Q18 mostra que quanto maior a sua auto atribuição ideológica, maior a avaliação em Bolsonaro.
 
 ### Observando o resultado das regressões, você diria que qual tipo de variável explica mais a variação das notas atribuidas a Jair Bolsonaro, as socio-economicas ou políticas?
 
-Pela magnitude das correlações, eu diria que as variáveis políticas
+Pela magnitude das correlações e magnitude dos coeficientes, eu diria que as variáveis políticas
 foram mais determinantes nas notas atribuidas do que as variáveis
 socio-econômicas. A variável renda foi a pior a que mostrou ter menor
 significância estatística no momento de avaliar o governo bolsonaro. Ao
@@ -880,10 +876,10 @@ poderiam melhorar o nosso poder inferencial.
 O modelo com maior erro foi o com a variável Educação. Entretanto é
 difícil fazer uma comparação assim, tendo em vista que há diferença
 entre os graus de liberdade entre eles, dimuíndo nosso poder comparativo
-entre os modelos. Quanto menor os erros, melhor o modelo.
+entre os modelos. Quanto menores os erros, melhor o modelo. 
 
 ### Observando o resultado das regressões, você diria que qual(quais) variáveis possui(em) maior efeito no nota atribuída a Jair Bolsonaro?
 
 As variáveis políticas foram a que tem maior efeito na nota atribuída ao
-governo Bolsonaro. A de auto-atribuição ideologica, a da nota dada ao
-PT, foram as que mais influenciaram a nota atribuída ao governo.
+governo Bolsonaro. A partir do p-valor e da magnitude dos coeficientes as variáveis
+ de auto-atribuição ideologica, a da nota dada ao PT, foram as que mais influenciaram a nota atribuída ao governo.
