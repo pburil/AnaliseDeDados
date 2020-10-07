@@ -86,11 +86,11 @@ t.test(Q1607 ~ D2_SEXO, data = banco)
     ##                6.020536                5.061360
 
 Os homens avaliam melhor Bolsonaro do que as mulheres. Como o 0 não está
-incluso no intervalo de confiança, não há diferença com significância
+incluso no intervalo de confiança, há significância
 estatística. A média do grupo masculino foi de 1 ponto a mais do que a
 média do grupo feminino. O número de casos da amostra para categoria
 masculino é menor do que para a categoria feminino. O p-valor foi
-bastante baixo, com 9 zeros antes do 4.69.
+bastante baixo, com 9 zeros antes do 4.69, sendo um p-valor relevante estatísticamente.
 
 ### Faça uma regressão bivariada com estas duas variáveis, verificando em que medida sexo explica a nota atribuida a Bolsonaro. Interprete o resultado da regressão (o \(\beta\), o \(\alpha\), p-valores e medidas de desempenho do modelo)
 
@@ -132,9 +132,10 @@ governo Bolsonaro, em média, 0.95 a menos do que se fosse homem. O
 efeito da categoria feminino foi negativo para a avaliação do governo
 bolsonaro. A variável apresenta (\*\*\*) que seria um bom nível de
 confiança com que podemos afirmar que o efeito não é nulo. O R² e o R²
-ajustado foi pequeno, mesmo sendo uma única variável que está sendo
+ajustado foi pequeno, isso devido ao modelo ser uma única variável que está
 inserida na análise. O p-valor foi bem baixo, sugerindo que há
-significância estátistica na regressão.
+significância estátistica na regressão. Em outras palavras, a cada unidade em ser feminino, 
+a tendência é que o governo Bolsonaro seja avaliado em -0.95
 
 ### Outra variável categórica bastante presente no debate sobre voto na última eleição é religião (D10). Represente esta variável graficamente.
 
