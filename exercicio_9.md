@@ -81,19 +81,19 @@ summary(regressao)
     ## Multiple R-squared:  0.3028, Adjusted R-squared:  0.297 
     ## F-statistic: 52.44 on 12 and 1449 DF,  p-value: < 2.2e-16
 
-Vemos que o R² e o R² ajustado são relativamente razoáveis. Os p-valores
+Vemos que o R² e o R² ajustado são razoáveis. Os p-valores
 das interações não deram significância estátistica, ficaram bem altos. O
 Beta do D2\_SEXO deu negativo, sugerindo que a categoria de referencia é o
-sexo masculino. Assim, sendo os homens a categoria de referência, as mulheres
-avaliam Bolsonaro, em média, -6.115 a menos do que os homens católicos.
-Quando religião for igual a 0 (católica), o D2\_SEXO corresponderá a -6.115 
-(feminino e católica) para a avaliação ao governo bolsonaro. Assim, o 0 seria o católico para religiao e
-masculino para o D2\_SEXO.  Quando o sexo for igual a 1 (no caso, masculino) a religião terá coeficientes
-positivos, com excessão de Outras (sem ser a interação entre as religiões e o sexo). 
+sexo masculino. Assim, sendo os homens a categoria de referência, a cada unidade adicional de mulheres
+católicas, em média, avaliam Bolsonaro em -6.115. Assim, o 0 seria o católico para religião e
+masculino para o D2\_SEXO.  Quando o sexo for igual a 1 (no caso, feminino) a religião terá coeficientes
+negativos, com excessão de Outras (sem ser a interação entre as religiões e o sexo). 
 Também percebemos que haverá diferença significante comparando o homens católicos com homens evangélicos. 
-O coeficiente omitido é o de homens católicos. Assim, podemos interpretar os outros coeficientes da seguinte forma:
-para o coeficiente da religião evangélica, seria que há uma pequena significância estátistica comparando com 
-os homens de reliigão católica.
+Assim, podemos interpretar os outros coeficientes da seguinte forma: para o coeficiente da religião evangélica, 
+seria que há uma diferença subbstancial comparando com  o coeficiente dos homens de religião católica.
+As variáveis que tiveram relevância estatística foram a Q18, Q1501, Educação (D3_Escola) e D2_SEXO. Os coeficientes sugerem que
+um aumento de uma unidade na variável Q1501, haveria uma avaliação negativa em -3.956 do governo Bolsonaro. Enquanto que o aumento
+de uma unidade da variável Q18, haveria uma avaliação positiva do governo Bolsonaro em 3.150
 
 ### Interprete a significancia estatística dos coeficientes estimados
 
@@ -108,10 +108,11 @@ dwplot(regressao)
 Vários dos intervalos de confiança se sobrepõem. Vários deles também
 detém o 0 em seu intervalo, como: 1) a relação entre a variáveis não
 ter religião e o sexo; 2) outras e o sexo; 3) ser evangélico e o sexo;
-4) D9; 5) D1A\_ID; 6) não ter religião e 7) outras. Alguns intervalos de
-confiança são menores do que outros, como D9, D3\_ESCOLA, D1A\_ID,
-sugerindo ter maior confiança no intervalo desses paramêtros
-populacionais.
+4) D9; 5) D1A\_ID; 6) não ter religião e 7) outras. Essas variáveis que detém o 0 no seu intervalo de confiança não tem relevância estatística.
+Enquanto que as variáveis que não têm o 0 em seu intervalo de confiança, tem relevância estatística. Como podemos ver,
+as variáveis que não tem o 0 em seu intervalo de confiança são: Q1501, Q18, D2_sexo. 
+Alguns intervalos de confiança são menores do que outros, como D9, D3\_ESCOLA, D1A\_ID,
+sugerindo ter maior confiança no intervalo desses paramêtros populacionais.
 
 ### Faça um gráfico que mostre a interação entre as duas variáveis. Interprete o resultado apresentado
 
@@ -140,10 +141,10 @@ confiança não se sobrepõem. O tamanho do intervalo de confiança das
 Outras e de Não tem religião sugere que o tamanho do intervalo desse
 paramêtro para essa população é maior. A amplitude da variação pode ser
 maior nesses casos. Entretanto, temos que perceber que essa
-representação são de interações que não deram estatisticamente
-significante. Por fim, quando comparamos os homens sem religião 
+representação são de interações que não deram significância estatística.
+Por fim, quando comparamos os homens sem religião 
 com os homens de outras categorias, percebemos que os intervalos 
 de confiança se sobrepõem. Para o sexo feminino, talvez só haja significância
 estátistica entre o Outras e as mulheres evangélicas, já que o intervalo 
-de confiança não se sobrepõem. Resumidamente, não há tanta significância 
+de confiança não se sobrepõem. Em outras palavras, não há tanta significância 
 estátistica entre as categorias, seja entre os homens ou entre as mulheres.
