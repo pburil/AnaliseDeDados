@@ -1,5 +1,7 @@
-Autor: Pedro Buril
-Título: "A Democracia é boa para o desempenho ambiental? Uma análise de correlação entre o Ocean Health Index e o V-dem"
+
+  title: "A Democracia é boa para o desempenho ambiental? Uma análise de correlação entre o Ocean Health Index e o V-dem"
+author: "Pedro Buril Saraiva Lins"
+output: r_document
 
 ## 1. Introdução
 
@@ -13,6 +15,18 @@ Dessa forma, este trabalho busca acrescentar a literatura sobre o impacto da Dem
 Regimes mais democráticos têm melhor desempenho ambiental? Qual o efeito do nível de democracia sobre a preservação dos recursos naturais? Nosso desenho de pesquisa foi elaborado para responder a essas perguntas. Para isso, examinamos a relação entre dois índices: I) o V-dem e suas múltiplas dimensões que operacionalizam a Democracia; II) o Ocean Health Index (Índice da Saúde dos Oceanos, no acrônimo em Português). O primeiro dimensiona a qualidade democrática dos regimes políticos e o segundo visa mensurar a saúde dos oceanos nos países costeiros. A tabela 1 sumariza nosso desenho de pesquisa. 
 
 ```{r, echo = FALSE, include = FALSE}
+
+library(tidyverse)
+library(readxl)
+library(ggplot2)
+library(dplyr)
+library(tidyr)
+library(dotwhisker)
+library(lmtest)
+library(car)
+library(GGally)
+library(knitr)
+library(scales)
 
 vetor_populacao <- c("114 países")
 vetor_variaveldependente <- c("Índice de Saúde dos Oceanos (OHI) - Média dos anos 2012 - 2019")
@@ -46,17 +60,6 @@ Existem dezenove subcomponentes que compõe cada um dos cinco componentes da Demo
 Representamos graficamente e testamos as 5 dimensões da democracia a seguir:
   
   ```{r}
-library(tidyverse)
-library(readxl)
-library(ggplot2)
-library(dplyr)
-library(tidyr)
-library(dotwhisker)
-library(lmtest)
-library(car)
-library(GGally)
-library(knitr)
-library(scales)
 
 #url3 <- "https://drive.google.com/file/d/1rYP4-uQQRvNxNexb1X-nirwb-zgZzer0/view?usp=sharing"
 
@@ -417,7 +420,7 @@ shapiro.test(sresid)
 plot(regressao, 4)
 plot(regressao, 5)
 
-ggplot(banco_final, aes(OHI, Electoral)) +
+ggplot(banco_final, aes(Electoral, OHI)) +
   geom_point() +
   geom_smooth(method = "lm")
 ```
@@ -465,7 +468,7 @@ Nosso teste de normalidade dos resíduos foi positivo. O termo de erro deve segui
                                                                                                                                                                                                                                                                           plot(regressao1, 4)
                                                                                                                                                                                                                                                                           plot(regressao1, 5)
                                                                                                                                                                                                                                                                           
-                                                                                                                                                                                                                                                                          ggplot(banco_final, aes(OHI, Deliberative)) +
+                                                                                                                                                                                                                                                                          ggplot(banco_final, aes(Deliberative, OHI)) +
                                                                                                                                                                                                                                                                             geom_point() +
                                                                                                                                                                                                                                                                             geom_smooth(method = "lm")
                                                                                                                                                                                                                                                                           ```
@@ -501,7 +504,7 @@ Nosso teste de normalidade dos resíduos foi positivo. O termo de erro deve segui
                                                                                                                                                                                                                                                                           plot(regressao4, 4)
                                                                                                                                                                                                                                                                           plot(regressao4, 5)
                                                                                                                                                                                                                                                                           
-                                                                                                                                                                                                                                                                          ggplot(banco_final, aes(OHI, Egalitarian)) +
+                                                                                                                                                                                                                                                                          ggplot(banco_final, aes(Egalitarian, OHI)) +
                                                                                                                                                                                                                                                                             geom_point() +
                                                                                                                                                                                                                                                                             geom_smooth(method = "lm")
                                                                                                                                                                                                                                                                           ```
@@ -536,7 +539,7 @@ Nosso teste de normalidade dos resíduos foi positivo. O termo de erro deve segui
                                                                                                                                                                                                                                                                           plot(regressao5, 4)
                                                                                                                                                                                                                                                                           plot(regressao5, 5)
                                                                                                                                                                                                                                                                           
-                                                                                                                                                                                                                                                                          ggplot(banco_final, aes(OHI, IDH)) +
+                                                                                                                                                                                                                                                                          ggplot(banco_final, aes(IDH, OHI)) +
                                                                                                                                                                                                                                                                             geom_point() +
                                                                                                                                                                                                                                                                             geom_smooth(method = "lm")
                                                                                                                                                                                                                                                                           ```
@@ -666,13 +669,16 @@ Lindberg, S. I., Coppedge, M., Gerring, J., & Teorell, J. (2014). V-Dem: A New W
 
 Li, Q., & Reuveny, R. (2006). Democracy and environmental degradation.International Studies Quarterly,50(4), 935-956
 
-Ophuls, W. (1977).Ecology and the politics of scarcity. San Francisco, CA: WH Freeman
+Lijphart, A. Comparative politics and the comparative method. American Political Science Review, 65, 6682-6693, 1971
+
+Mitchel, R.; Bernauer, T. Empirical Research in International Environmental Policy: design qualitative case studies. Journal of Environmental & Development, 7(1), 4-31, 1998. Disponível em: <http://web.stanford.edu/group/IDL/102/lectures/Read-ings/L2R1.pdf>Ophuls, W. (1977).Ecology and the politics of scarcity. San Francisco, CA: WH Freeman
 
 Rodrigues, D.; Silva Júnior, J.; Silva, D. et al. A sustentável leveza da democracia? Os efeitos da qualidade democrática sobre o desempenho ambiental. Revista Desenvolvimento e Meio Ambiente, Vol. 33, Abril, 2015.
 
 Rydén, O., Zizka, A., Jagers, S. C., Lindberg, S. I. & Antonelli, A. Linking democracyand biodiversity conservation: Empirical evidence and research gaps.Ambio15pp (2019).
 
 Winslow, M. (2005). Is democracy good for the environment?Journal of Environmental Planning and Management,48(5), 771-783.
+
 
 ## Apêndice 
 
